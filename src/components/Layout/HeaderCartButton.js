@@ -18,12 +18,12 @@ const HeaderCartButton = (props) => {
             setBtnIsBumped(false);
         },300);
 
+        //Clean up timer
         return () => {
             clearTimeout(timer);
         };
     }, [items])
 
-    
 
     const numberOfCartItems = items.reduce((currNum, item)=>{
         return currNum + item.amount
